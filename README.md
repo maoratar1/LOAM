@@ -38,7 +38,6 @@ Maor Atar
 
 ![](https://web-api.textin.com/ocr_image/external/597ed0b35dd6d82d.jpg)
 
-## 1.1 | Introduction – Cont.
 
 • The key idea in obtaining this level of performance is the division of the typically complex problem of simultaneous localization and mapping (SLAM), which seeks to optimize a large number of variables simultaneously, by two algorithms.
 
@@ -48,7 +47,6 @@ Maor Atar
 
 • Specifically, both algorithms extract feature points located on sharp edges and planar surfaces and match the feature points to edge line segments and planar surface patches, respectively.
 
-## 1.1 | Introduction – Cont.
 
 • To summarize:
 
@@ -71,7 +69,7 @@ Maor Atar
 
 ![](https://web-api.textin.com/ocr_image/external/68c4f7d5276f1d72.jpg)
 
-## 1.2 | Introduction - Lidar
+## 1.2 | Lidar
 
 # Hardware
 
@@ -148,7 +146,6 @@ men
 
 ![](https://web-api.textin.com/ocr_image/external/6c4bcfffa84bc951.jpg)
 
-# 2 | Notations & Task desc.
 
 # 2 | Notations & Task Description
 
@@ -190,7 +187,6 @@ $·WorldCS{W}$ and $X_{(k,i)}^{W}$ the i-th point in $P_{k}$ in World CS.
 
 • Angular/Linear lidar’s velocities are smooth and continuous over time.
 
-# 2 | Notations & Task Description
 
 <!-- Implemen tation -->
 ![](https://web-api.textin.com/ocr_image/external/078b3d952c5cc053.jpg)
@@ -254,7 +250,6 @@ Edges Points
 
 tk
 
-## The algorithm in a nutshell
 
 **Step** **3:** Find Edges-lines and Planar-patches correspondences
 
@@ -271,7 +266,6 @@ Planar
 
 Point
 
-## The algorithm in a nutshell
 
 <!-- Pk $\frac {\pi _{k+1}^{L}}{}$ $P_{k+1}$ -->
 ![](https://web-api.textin.com/ocr_image/external/1972abc04bdb5ecd.jpg)
@@ -328,7 +322,6 @@ In Detail
 
 • With co-planar geometric relationship.
 
-## 5.1| Feature Point Extraction
 
 ·Selection feature points on **sharp** **edges** and **planar** **surface** patches.
 
@@ -371,7 +364,6 @@ $\text {Let}i\in P_{k}$ and $S$  be the i-th consecutive points on the same scan
 
 ![](https://web-api.textin.com/ocr_image/external/7ee38457bf7a0112.jpg)
 
-## 5.1 | Feature Point Extraction
 
 <!-- Implemen tation -->
 ![](https://web-api.textin.com/ocr_image/external/7fb50e426cb60ee0.jpg)
@@ -416,7 +408,6 @@ edge_points_indices += start
 
 planar_points_indices += start
 
-## 5.1 | Feature Point Extraction
 
 Implementation
 
@@ -477,7 +468,6 @@ Bad ones: There's a bush in the left that made me troubles...
 
 ![](https://web-api.textin.com/ocr_image/external/9dfb40bd09fc9903.jpg)
 
-## 5.1 | Feature Point Extraction
 
 <!-- Implemen tation -->
 ![](https://web-api.textin.com/ocr_image/external/d7dd3d5b25b4a40b.jpg)
@@ -530,7 +520,6 @@ $$\boldsymbol {T}_{(k+1,i)}^{L}=\frac {t_{i}-t_{k+1}}{t-t_{k+1}}\boldsymbol {T}_
 
 ·It's a recursive algorithmm, we start with an initial guessof $T_{k+1}^{L}$ at with it and (4) we can project $E_{k+1}$ and $H_{k+1}$ to time $t_{k+1}$ ,denoted by $\hat {E}_{k+1}$ and $\widehat {H}_{k+1}$ respectively.
 
-## 5.2 | Motion Estimation
 
 <!-- Implemen or each tation -->
 ![](https://web-api.textin.com/ocr_image/external/8302cd8581e0646f.jpg)
@@ -567,7 +556,6 @@ X:EdgePoint
 <!-- $\overline {\mathcal {P}}_{k}$ $\mathcal {P}_{k+1}$ $\mathcal {P}_{k}$ $t_{k}$ $t_{k+1}$ -->
 ![](https://web-api.textin.com/ocr_image/external/1f7dda6b7c4bd3ea.jpg)
 
-## 5.2 | Finding Feature Point Correspondence
 
 • With $P_{k+1},$  we find edge points and planar points from the lidar cloud. Let $\boldsymbol {E}_{\boldsymbol {k}+1}\text {and}\boldsymbol {H}_{\boldsymbol {k}+1}\text {be}$ the set of edge points and planar points, respectively.
 
@@ -588,7 +576,6 @@ $$k+1,P_{k+1}$$
 
 $$c=\frac {1}{|\mathcal {S}|\cdot \left\|\boldsymbol {X}_{(k,i)}^{L}\right\|}\left\|\sum _{j\in \mathcal {S},j\neq i}\left(\boldsymbol {X}_{(k,i)}^{L}-\boldsymbol {X}_{(k,j)}^{L}\right)\right\|.$$
 
-## 5.3 | Finding Feature Point Correspondence
 
 Finding point to edge line correspondence.
 
